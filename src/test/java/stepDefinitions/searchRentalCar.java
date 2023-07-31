@@ -34,7 +34,7 @@ public class searchRentalCar {
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "10");
 		cap.setCapability("deviceName", "Android SDK built for x86");
-		cap.setCapability("udid", "emulator-5554");
+		cap.setCapability("udid", "emulator-5556");
 				
 //		Application details
 		
