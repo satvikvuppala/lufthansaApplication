@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import java.net.URL;
+import java.sql.Driver;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -34,7 +35,7 @@ public class searchRentalCar {
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "10");
 		cap.setCapability("deviceName", "Android SDK built for x86");
-		cap.setCapability("udid", "emulator-5556");
+		cap.setCapability("udid", "emulator-5554");
 				
 //		Application details
 		
@@ -81,13 +82,19 @@ public class searchRentalCar {
         
 //      Navigating to Rental cars
         driver.findElementByAccessibilityId("Navigate up").click();
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ListView/android.widget.LinearLayout[10]/android.widget.LinearLayout/android.widget.TextView").click();
-        String targetText = "Rental Car";
-        By scrollableElement1 = MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))"+".scrollIntoView(new UiSelector().textContains(\"" + targetText + "\").instance(0))");
+//        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.ListView/android.widget.LinearLayout[10]/android.widget.LinearLayout/android.widget.TextView").click();
+        String planTrip = "Plan Trip";
+        By scrollableElement1 = MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))"+".scrollIntoView(new UiSelector().textContains(\"" + planTrip + "\").instance(0))");
         driver.findElement(scrollableElement1).click();
+        String targetText = "Rental Car";
+        By scrollableElement2 = MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))"+".scrollIntoView(new UiSelector().textContains(\"" + targetText + "\").instance(0))");
+        driver.findElement(scrollableElement2).click();
         
-        Thread.sleep(100000);
+        System.out.println("Rental Car Clicked");
         
+        Thread.sleep(50000);
+        
+        System.out.println("Browser Opened");
 //        Set<String> contexts = driver.getContextHandles();
 //        for (String context : contexts) {
 //            if (context.contains("WEBVIEW")) {
