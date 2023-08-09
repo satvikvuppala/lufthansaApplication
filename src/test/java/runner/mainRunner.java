@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 		tags = "@lufthansa", 
 		monochrome = false, 
 		dryRun = false,
-		plugin = {"pretty", "html:target/cucumber.json"})
+		plugin = {"pretty", "json:target/cucumber.json"})
 
 public class mainRunner extends AbstractTestNGCucumberTests {
 
