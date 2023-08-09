@@ -24,14 +24,10 @@ public class searchFlight {
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "10");
 		cap.setCapability("deviceName", "Android SDK built for x86");
-		cap.setCapability("udid", "emulator-5554");
-		
-//		b0d3f02a
-//		emulator-5554
+		cap.setCapability("udid", "emulator-5554")
 		
 //		Application details
 //		cap.setCapability("app", "C://Users//Admin//Desktop//Automation//APK's//lufthansa.apk");
-		
 		cap.setCapability("appPackage", "com.lufthansa.android.lufthansa");
 		cap.setCapability("appActivity", "com.lufthansa.android.lufthansa.ui.activity.HomeActivity");
 		
@@ -44,11 +40,11 @@ public class searchFlight {
 		
 	}
 	
-//	@After
-//	public static void closeDriver() {
-//		driver.quit();
-//		System.out.println("Application closed");
-//	}
+	@After
+	public static void closeDriver() {
+		driver.quit();
+		System.out.println("Application closed");
+	}
 	
 
 	@Given("Open lufthansa application on android emulator")
