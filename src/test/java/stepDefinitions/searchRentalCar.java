@@ -91,29 +91,18 @@ public class searchRentalCar {
         driver.findElement(scrollableElement2).click();
         
         System.out.println("Rental Car Clicked");
-        
         Thread.sleep(50000);
-        
-        System.out.println("Browser Opened");
-//        Set<String> contexts = driver.getContextHandles();
-//        for (String context : contexts) {
-//            if (context.contains("WEBVIEW")) {
-//                driver.context(context);
-//                break;
-//            }
-//        }
-//        
+        System.out.println("Browser Opened");   
         
 //      Search for Rental cars
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[2]/android.view.View[5]/android.view.View[5]/android.view.View/android.view.View/android.view.View[2]/android.widget.Button").click();
-        driver.findElementById("dropdown-pickupLocation-input").sendKeys("Amsterdam");
-        driver.findElementById("dropdown-pickupLocation-item-0").click();
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[2]/android.view.View[5]/android.view.View[5]/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[3]").click();
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[8]/android.view.View/android.app.Dialog/android.view.View/android.widget.GridView[2]/android.view.View[2]/android.view.View[6]").click();
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[8]/android.view.View/android.app.Dialog/android.view.View/android.widget.GridView[2]/android.view.View[5]/android.view.View[6]").click();
-        driver.findElementById("search-0").click();
-        
-        Thread.sleep(5000);
+//        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[2]/android.view.View[5]/android.view.View[5]/android.view.View/android.view.View/android.view.View[2]/android.widget.Button").click();
+//        driver.findElementById("dropdown-pickupLocation-input").sendKeys("Amsterdam");
+//        driver.findElementById("dropdown-pickupLocation-item-0").click();
+//        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[2]/android.view.View[5]/android.view.View[5]/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View[3]").click();
+//        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[8]/android.view.View/android.app.Dialog/android.view.View/android.widget.GridView[2]/android.view.View[2]/android.view.View[6]").click();
+//        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[8]/android.view.View/android.app.Dialog/android.view.View/android.widget.GridView[2]/android.view.View[5]/android.view.View[6]").click();
+//        driver.findElementById("search-0").click();
+//        Thread.sleep(5000);
         
         
         
