@@ -16,7 +16,7 @@ public class searchFlight {
 	static AppiumDriver<MobileElement> driver;
 	URL url;
 	static DesiredCapabilities cap = new DesiredCapabilities();
-	
+	/*
 	@Before
 	public static void lufthansa() throws Exception {
 		
@@ -39,7 +39,48 @@ public class searchFlight {
 		Thread.sleep(5000);
 		
 	}
-	
+	 */
+
+	@Before
+	public static void lufthansa() {
+		cap.setCapability("userName", "satvikvuppala_0hYc9a");
+		cap.setCapability("accessKey", "zSAAcSgfjPRsBKtNEzJe");
+		cap.setCapability("framework", "cucumber");
+		cap.setCapability("os", "Windows");
+		cap.setCapability("osVersion", "11");
+		cap.setCapability("browserName", "Chrome");
+		cap.setCapability("browserVersion", "103.0");
+		cap.setCapability("buildName", "browserstack-build-1");
+		cap.setCapability("projectName", "BrowserStack Sample");
+		cap.setCapability("browserstackLocal", true);
+
+	}
+
+
+/*
+		userName: satvikvuppala_0hYc9a
+		accessKey: zSAAcSgfjPRsBKtNEzJe
+		framework: cucumber
+		platforms:
+		- os: Windows
+		osVersion: 11
+		browserName: Chrome
+		browserVersion: 103.0
+				- os: Windows
+		osVersion: 10
+		browserName: Firefox
+		browserVersion: 102.0
+				- os: OS X
+		osVersion: Big Sur
+		browserName: Safari
+		browserVersion: 14.1
+		parallelsPerPlatform: 1
+		browserstackLocal: true
+		buildName: browserstack-build-1
+		projectName: BrowserStack Sample
+*/
+
+
 	@After
 	public static void closeDriver() {
 		driver.quit();
@@ -68,7 +109,7 @@ public class searchFlight {
         
 //      Continue as guest
         driver.findElement(By.id("not_now_button")).click();
-        System.out.println("Contiued as a guest");
+        System.out.println("Continued as a guest");
         driver.findElement(By.id("button2")).click();
         Thread.sleep(2000);
         driver.findElementById("com.android.permissioncontroller:id/permission_allow_foreground_only_button").click();
@@ -79,7 +120,7 @@ public class searchFlight {
 	@When("User enters FROM city")
 	public void user_enters_from_city() throws Exception {
         driver.findElement(By.xpath("//android.widget.RelativeLayout[@content-desc=\"Of\"]/android.widget.TextView[2]")).click();
-        MobileElement el_from = (MobileElement) driver.findElementById("com.lufthansa.android.lufthansa:id/airportPickerSearch");
+        MobileElement el_from = driver.findElementById("com.lufthansa.android.lufthansa:id/airportPickerSearch");
         el_from.sendKeys("Mumbai");
         driver.findElementById("com.lufthansa.android.lufthansa:id/airportPickerViewIconTextView").click();
         System.out.println("From city selected");
